@@ -6,6 +6,7 @@ class HomepageTestsTest < ApplicationSystemTestCase
   
     assert_selector "h1", text: "Go Chef!"
     assert page.has_content? users(:one).name
+    p @response.body
   end
 
   test "click the login" do
