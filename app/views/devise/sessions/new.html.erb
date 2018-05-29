@@ -4,8 +4,8 @@
   </div>
   <div class='login-box'>
     <h2>Chef Login</h2>
-    <div class="chef-login"><br>
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        
         <div class="field">
           <%= f.label :email %><br />
           <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
@@ -26,11 +26,11 @@
         <div class="actions">
           <%= f.submit "Log in" %>
         </div>
-      <% end %><br>
+      <% end %>
+      
       <div class='signup'>
         <p>Looking to join?...</p>
         <%= link_to "Create an Account", new_user_registration_path %>
       </div>
-    </div>
   </div>
 </div>
