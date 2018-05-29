@@ -1,5 +1,6 @@
 .main-container.login{
   min-height: 100vh;
+  max-height: 100vh;
   min-width: 100vh;
   background-image: url('/images/hero/spread.jpg');
   background-size: cover;
@@ -14,15 +15,46 @@
 
 .login-box {
   width: 350px;
-  margin: 50px 0px;
+
+  h2 {
+    color: #2b90d9;
+    text-align: center;
+    margin-top: 30px;
+  }
+  .signup {
+    padding: 20px;
+    p{
+      font-weight: 300;
+    }
+  }
 }
 
+.signup a {
+  font-size: 25px;
+  display: block;
+  color: white;
+  background: #2b90d9;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 0.2em 0;
+  line-height: 1.25;
+  transition: all 0.15s ease-in-out;
+  width: 150px;
+  font-family: 'Lobster';
+  margin-top: 10px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  text-decoration: none;
 
-.login-box, .chefdeets, .avatar, .text-login {
+  &:hover{
+    box-shadow: 0px 5px 14px rgba(0,0,0,0.4);
+  }
+}
+
+.login-box, .chefdeets, .avatar, .text-login, .create-container{
   margin: 30px;
   height: auto;
   background-color: rgba(255, 255, 255, 0.7);
-  // position: absolute;
   align-items: center;
   display:flex;
   justify-content: center;
@@ -32,64 +64,6 @@
     font-weight: bold;
     margin-top: 15px;
   }
-
-  h2 {
-    color: #2b90d9;
-    text-align: center;
-    margin-top: 20px;
-  }
-
-  .signup {
-    padding: 20px;
-    p{
-      font-weight: 300;
-    }
-  }
-
-  .signup a {
-    font-size: 25px;
-    display: block;
-    color: white;
-    background: #2b90d9;
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    padding: 0.2em 0;
-    line-height: 1.25;
-    transition: all 0.15s ease-in-out;
-    width: 150px;
-    font-family: 'Lobster';
-    margin-top: 10px;
-    margin-bottom: 30px;
-    cursor: pointer;
-    text-decoration: none;
-
-    &:hover{
-      box-shadow: 0px 5px 14px rgba(0,0,0,0.4);
-    }
-  }
-
-  .chef-login {
-    text-align: center;
-  }
-  .actions {
-    display: flex;
-    justify-content: center;
-  }
-}
-
-
-.signup-container {
-
-  h2 {
-    text-align: center;
-  }
-}
-
-
-.create-container {
-   display: flex;
-   align-items: center;
-   flex-direction: column;
 }
 
 .new-user {
@@ -106,4 +80,22 @@ div.create-container {
   text-align: center;
   margin: auto;
   width: 50%;
+}
+
+
+.signup-container {
+  width: 350px;
+  box-sizing: border-box;
+  text-align: center;
+  
+  h2 {
+    text-align: center;
+    margin-top: 30px;
+  }
+}
+
+.create-container {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
 }

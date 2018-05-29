@@ -1,9 +1,17 @@
-<h3>
-<% if user_signed_in? %>
-  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
-<% else %>
-  <%= link_to('Login', new_user_session_path) %>
-<% end %></h3>
-<% if !current_page?('/') %>
-<h3><%= link_to 'Home', '/' %></h3>
-<% end %>
+<div class="hero-buttons">
+   
+  <% if user_signed_in? %>
+    <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+  <% else %>
+    <%= link_to('Login', new_user_session_path) %>
+  <% end %>
+
+  <% if user_signed_in? && !current_page?("/users/#{current_user.id}")%>
+    <%= link_to 'Profile', "/users/#{current_user.id}" %>
+  <% end %>
+ 
+  <% if !current_page?('/') %>
+    <%= link_to 'Home', '/' %>
+  <% end %>
+
+</div>
