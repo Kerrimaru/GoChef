@@ -29,6 +29,20 @@
   }
 }
 
+// .new-user{
+//   display:flex;
+
+//   field{
+//     flex-direction: column;
+//   }
+// }
+
+#new_user{
+  display:flex;
+  flex-direction:column;
+  text-align: center;
+}
+
 .signup a {
   font-size: 25px;
   display: block;
@@ -94,7 +108,7 @@ div.create-container {
   }
 }
 
-.create-container {
+div.create-container {
    display: flex;
    align-items: center;
    flex-direction: column;

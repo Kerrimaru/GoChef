@@ -3,7 +3,7 @@
     <%= link_to "Home", '/' %>
   </div>
   <div class='login-box'>
-    <h2>Chef Login</h2>   
+    <h2>Chef Login</h2>
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         
         <div class="field">
@@ -26,7 +26,7 @@
         <div class="actions">
           <%= f.submit "Log in" %>
         </div>
-      <% end %><br>
+      <% end %>
       
       <div class='signup'>
         <p>Looking to join?...</p>
