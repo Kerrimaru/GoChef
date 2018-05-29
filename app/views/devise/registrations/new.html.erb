@@ -1,14 +1,9 @@
-
 <div class='signup-container'>
-  
-  <%= render 'users/login' %>
-  
   <h2>Sign up</h2>
-
+  <%= render 'users/login' %>
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= devise_error_messages! %>
-
-    <div class="create-container">  
+    <div id="create-container">  
       <div class="field">
         <%= f.label :name %><br />
         <%= f.text_field :name, autofocus: true %>
@@ -39,17 +34,16 @@
         <%= f.radio_button :role, 'chef', :value => 0 %>
         <%= label :role, 'Chef' %>        
       </div>
-
-      <div class="field">
-        <p>Location</p>   
-        <div id="signup-map"><%= f.gmap_coordinate_picker api_key: 'AIzaSyAbIxD3RSs1_cfkMsqlr9kCl4N-lA_9KtU', :lat_column => 'location_lat', :lng_column => 'location_lon' , :zoom_level => 10, :default_coordinates => ['51.507351','-0.127758'] %>
-        </div>
-      </div>    
-
-      <div class="actions"><br>
-        <%= f.submit "Sign up" %>
-      </div>
     </div>
-  <% end %>
-</div>
 
+    <div class="field">
+      <p>Location</p>   
+      <div id="signup-map"><%= f.gmap_coordinate_picker api_key: 'AIzaSyAbIxD3RSs1_cfkMsqlr9kCl4N-lA_9KtU', :lat_column => 'location_lat', :lng_column => 'location_lon' , :zoom_level => 10, :default_coordinates => ['51.507351','-0.127758'] %>
+      </div>
+    </div>  
+
+    <div class="actions"><br>
+      <%= f.submit "Sign up" %>
+      <% end %>
+    </div>
+</div>

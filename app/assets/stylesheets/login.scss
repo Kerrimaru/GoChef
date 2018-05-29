@@ -80,9 +80,9 @@
   }
 }
 
-.new-user {
-  text-align: center;
-}
+// .new-user {
+//   text-align: center;
+// }
 
 #signup-map {
   margin: auto;
@@ -98,9 +98,10 @@ div.create-container {
 
 
 .signup-container {
-  width: 350px;
+  width: auto;
   box-sizing: border-box;
   text-align: center;
+  justify-content: center;
   
   h2 {
     text-align: center;
@@ -112,4 +113,12 @@ div.create-container {
    display: flex;
    align-items: center;
    flex-direction: column;
+}
+
+.actions input {
+  margin: auto;
+}
+
+#signup-map {
+  margin: auto;
 }
