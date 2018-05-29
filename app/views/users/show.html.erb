@@ -32,12 +32,16 @@
   </div>
 </div>
  <% if @user.photos.length > 0 %>
+ <div class="profile-content">
+  <div class="left-container">
+ <h2> <%= @user.name %>'s Gallery </h2>
+ </div>
+ </div>
 <div class="gallery-container">
-  <h2> <%= @user.name %>'s Gallery </h2>
   <div class="user-gallery">
     <% @user.photos.each do |photo| %>
       <% height = photo.random_heights(['500px','510px','520px','530px','550px','560px','570px','580px','590px','600px']) %>
-      <div class="thumb" style="background-image:url(<%= photo.image.url(:medium) %>);height: <%= height %>"></div>
+      <div class="thumb swipebox" data-lity data-lity-target="<%= photo.image.url(:medium) %>" style="background-image:url(<%= photo.image.url(:medium) %>);height: <%= height %>"></div>
     <% end %>
     <% end %>
   </div>
@@ -72,4 +76,6 @@
       <%= f.submit "Create" %>
     <% end %>
   </div>
+ </div>
+</div>
 <% end %>

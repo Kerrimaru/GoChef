@@ -71,10 +71,14 @@ gem 'dropzonejs-rails'
 
 gem 'bootstrap', '~> 4.0'
 
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
+
+gem 'thor', '~> 0.20.0'
 
 gem 'geocoder'
 
 gem 'chosen-rails'
 
 gem 'coffee-rails'
+
+gem 'swipebox'
